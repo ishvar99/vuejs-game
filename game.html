@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	<div class="container">          
+<div class="box">
+	<h1 class="header">YOU</h1>
+	<div class="bar"></div>
+	<div :style="" class="health bar">{{you}}</div>
+</div>
+<div class="box">
+	<h1 class="header">MONSTER</h1>
+	<div class="bar"></div>
+	<div :style="" class=" health bar">{{monster}}</div>
+</div>
+</div>
+<div v-if="show" class="main">
+	<button @click="show=!show" class="btn">new game</button>
+</div>
+<div v-else class="main">
+	<button class="btn" @click="" id="attack">attack</button>
+	<button class="btn" id="specialAttack">special attack</button>
+	<button class="btn" id="heal">heal</button>
+	<button class="btn" id="giveUp">give up</button>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="game.js"></script>
+</html>
