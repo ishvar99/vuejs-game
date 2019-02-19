@@ -28,6 +28,20 @@
 	<button class="btn d" @click="update" id="heal">heal</button>
 	<button class="btn d" @click="update" id="giveUp">give up</button>
 </div>
+
+<div class="main" style="margin-top:50px">
+	<template v-if="messages.length==0">
+		<h1 class="header">HELP</h1>
+		<p class="para"><strong><em>This game works on random data and there is an equal  probability of winning for both you and monster...</em></strong></p>
+	</template>
+	<template v-else>
+		<h1 class="header">LOGS</h1>
+		<ul class="list" v-for="message in messages" >
+	<li v-if="message.turn==0" class="player"><strong>{{message.text}}</strong></li>
+	<li v-else class="cpu"><strong>{{message.text}}</strong></li>
+	</ul>
+	</template>
+</div>
 </div>
 </body>
 <script type="text/javascript" src="game.js"></script>
